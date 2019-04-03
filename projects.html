@@ -16,11 +16,11 @@
 <body>
   <header>
     <h1> Projects </h1>
-    
-<!--    <button class="fas fa-bars"></button>-->
+
+    <!--    <button class="fas fa-bars"></button>-->
     <ul id="internal-nav">
       <li>
-      <a href="#comp-sci">Computer Science</a>
+        <a href="#comp-sci">Computer Science</a>
         <ul>
           <li><a href="#gross-domestic-happiness">Gross Domestic Happiness</a></li>
           <li><a href="#data-analysis-dashboard">Data Analysis Dashboard</a></li>
@@ -32,108 +32,102 @@
           <li><a href="#rally">Contextualizing the Rally Round the Flag Effect</a></li>
         </ul>
       </li>
-      
+
     </ul>
   </header>
   <nav>
     <ul>
       <li><a href="index.html">About</a></li>
-<!--      <li><a href="resume.html">Resume</a></li>-->
-<!--      <li><a href="research.html">Research</a></li>-->
+      <!--      <li><a href="resume.html">Resume</a></li>-->
+      <!--      <li><a href="research.html">Research</a></li>-->
       <li><a class='current' href="projects.html">Projects</a></li>
     </ul>
   </nav>
+  <article>
+    <h2 id="comp-sci"> Computer Science </h2>
+    <section>
+      <div class="columns">
+        <div class='left'>
+          <h3 id="gross-domestic-happiness"> Gross Domestic Happiness </h3>
+          <p> (<em>In progress</em>) </p>
+        </div>
+
+        <div class='right'>
+          <p>
+            Interactive set of visualizations for data from the <a href="http://worldhappiness.report/ed/2018/">2018 World Happiness Report</a>, which tracks countries' national happiness for that year. Features an interactive bump chart showing how countries' ranks have changed over time and an interactive map that allows you to view countries' specific values and also scroll to countries in the bump chart by clicking on the country in the map.
+          </p>
+          <p>
+            Project was implemented primarily in <span class="code javascript lang">JavaScript</span> with some data manipulation done in <span class="code r lang">R</span>. The bump chart was made using <a target="_blank" href="https://d3js.org/" class="code">d3.js</a> and the map was made using <a target="_blank" href="https://leafletjs.com/" class="code">leaflet.js</a>,<a class="code" href="http://turfjs.org/" target="_blank">turf.js</a>
+          </p>
+          <div class="links">
+            <a href="https://github.com/jeffrey-chase/Gross_Domestic_Happiness">View Code <span class="fab fa-github"> </span></a> <a href="https://jeffrey-chase.github.io/Gross_Domestic_Happiness/"> View Project <span class='far fa-window-maximize'></span></a>
+          </div>
+          <div class="tags">
+            <div>
+              <span class="fab fa-r-project"></span>
+              <span>R</span>
+            </div>
+            <div>
+              <span class="fab fa-js"></span>
+              <span>JavaScript</span>
+            </div>
+            <div>
+              <span class="fas fa-globe"></span>
+              <span>Spatial</span>
+            </div>
+            <div>
+              <span class="fas fa-chart-area"></span>
+              <span>Data Vis</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class='left'>
+          <h3 id="data-analysis-dashboard"> Data Analysis Dashboard </h3>
+          <p> (<em>In progress</em>) </p>
+
+        </div>
+
+        <div class='right'>
+
+          <p>
+            A simple dashboard that allows users to upload text-based datasets, review the data from them, and generate basic statistics based on the data type of the attributes. The dashboard also includes a widget for generating interactive visualizations of the data with the type of visualizations available depending on the attributes' data type.
+          </p>
+          <p>
+            Project was implemented primarily in <span class="code javascript lang">JavaScript</span> with use of the <a target="_blank" href="https://d3js.org/" class="code">d3.js</a> package.
+          </p>
+          <div class="links">
+            <a href="https://github.com/jeffrey-chase/Gross_Domestic_Happiness">View Code <span class="fab fa-github"> </span></a> <a href="https://jeffrey-chase.github.io/Gross_Domestic_Happiness/"> View Project <span class='far fa-window-maximize'></span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  <article>
+    <h2 id="international-studies"> International Studies </h2>
+    <section>
+      <div class="columns">
+        <div class="left">
+          <h3 id="rally"> Contextualizing the Rally &#39;Round the Flag Effect </h3>
+        </div>
+        <div class="right">
+          <p>
+            This research project evaluates the evidence for the rally &#39;round the flag effect and its logical derivative, the diversionary use of force, which is a popular theory for explaining when leaders go to war. With a series of regression models comparing United States presidential approval ratings with uses of force over time.
+          </p>
+          <p>
+            Overall, I found little statistical evidence for the rally &#39; round the flag effect; uses of force did not create a consistent bump in the president's approval ratings.
+          </p>
+          <div class="links">
+            <a href="https://">Read the full paper here <span class="fas fa-file"></span></a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </article>
 </body>
-<article>
-  <h2 id="comp-sci"> Computer Science </h2>
-  <section>
-    <div class="columns">
-      <div class='left'>
-        <h3 id="gross-domestic-happiness"> Gross Domestic Happiness </h3>
-        <p> (<em>In progress</em>) </p>
-      </div>
-
-      <div class='right'>
-        <p>
-          Interactive set of visualizations for data from the <a href="http://worldhappiness.report/ed/2018/">2018 World Happiness Report</a>, which tracks countries' national happiness for that year. Features an interactive bump chart showing how countries' ranks have changed over time and an interactive map that allows you to view countries' specific values and also scroll to countries in the bump chart by clicking on the country in the map.
-        </p>
-        <p>
-          Project was implemented primarily in <span class="code javascript lang">JavaScript</span> with some data manipulation done in <span class="code r lang">R</span>. The bump chart was made using <a target="_blank" href="https://d3js.org/" class="code">d3.js</a> and the map was made using <a target="_blank" href="https://leafletjs.com/" class="code">leaflet.js</a>,<a class="code" href="http://turfjs.org/" target="_blank">turf.js</a>
-        </p>
-        <div class="links">
-          <a href="https://github.com/jeffrey-chase/Gross_Domestic_Happiness">View Code <span class="fab fa-github"> </span></a> <a href="https://jeffrey-chase.github.io/Gross_Domestic_Happiness/"> View Project <span class='far fa-window-maximize'></span></a>
-        </div>
-        <div class="tags">
-          <div>
-            <span class="fab fa-r-project"></span>
-            <span>R</span>
-          </div>
-          <div>
-            <span class="fab fa-js"></span>
-            <span>JavaScript</span>
-          </div>
-          <div>
-            <span class="fas fa-globe"></span>
-            <span>Spatial</span>
-          </div>
-          <div>
-            <span class="fas fa-chart-area"></span>
-            <span>Data Vis</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="columns">
-      <div class='left'>
-        <h3 id="data-analysis-dashboard"> Data Analysis Dashboard </h3>
-        <p> (<em>In progress</em>) </p>
-
-      </div>
-
-      <div class='right'>
-
-        <p>
-          A simple dashboard that allows users to upload text-based datasets, review the data from them, and generate basic statistics based on the data type of the attributes. The dashboard also includes a widget for generating interactive visualizations of the data with the type of visualizations available depending on the attributes' data type.
-        </p>
-        <p>
-          Project was implemented primarily in <span class="code javascript lang">JavaScript</span> with use of the <a target="_blank" href="https://d3js.org/" class="code">d3.js</a> package.
-        </p>
-        <div class="links">
-          <a href="https://github.com/jeffrey-chase/Gross_Domestic_Happiness">View Code <span class="fab fa-github"> </span></a> <a href="https://jeffrey-chase.github.io/Gross_Domestic_Happiness/"> View Project <span class='far fa-window-maximize'></span></a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-
-
-
-  </section>
-</article>
-
-<article>
-  <h2 id="international-studies"> International Studies </h2>
-  <section>
-    <div class="columns">
-      <div class="left">
-        <h3 id="rally"> Contextualizing the Rally &#39;Round the Flag Effect </h3>
-      </div>
-      <div class="right">
-        <p>
-          This research project evaluates the evidence for the rally &#39;round the flag effect and its logical derivative, the diversionary use of force, which is a popular theory for explaining when leaders go to war. With a series of regression models comparing United States presidential approval ratings with uses of force over time.
-        </p>
-        <p>
-          Overall, I found little statistical evidence for the rally &#39; round the flag effect; uses of force did not create a consistent bump in the president's approval ratings.
-        </p>
-        <div class="links">
-          <a href="https://">Read the full paper here <span class="fas fa-file"></span></a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-</article>
 
 </html>
