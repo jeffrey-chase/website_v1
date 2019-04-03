@@ -14,7 +14,7 @@ body {
   color: #4D4D5B;
   font-family: "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
   font-size: 1em;
-  line-height: 1.22;
+  line-height: 1.33;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,7 +43,7 @@ h4 {
 h1 {
   font-size: 4.236em;
   line-height: 1.33;
-  margin: 1em 0;
+  margin: 0.5em 0;
 }
 
 h2 {
@@ -95,9 +95,21 @@ a[class^='fa'] {
   font-size: 1.25em;
 }
 
-a[class^='fa'] {
-  hover:
+a[href^='#'] {
+  background: none;
+  text-decoration: underline;
+  text-decoration-color: #9AEF99;
 }
+
+a[href^='#']:visited {
+  color: inherit;
+}
+
+a[href^='#']:hover {
+  border: none;
+  color: #9AEF99;
+}
+
 
 
 
@@ -177,6 +189,10 @@ nav a:active,
 
 .current {
   border-bottom: 0.215em solid white;
+}
+
+#internal-nav {
+  display: none;
 }
 
 /* Body Copy Layout */
@@ -290,7 +306,7 @@ code,
 
   header {
     text-align: left;
-    position: absolute;
+    position: fixed;
     left: 25px;
     top: 25px;
     width: 300px;
@@ -301,7 +317,7 @@ code,
     border-right: 0.22em solid #333344;
     height: 300px;
     position: absolute;
-    top: 0;
+    top: 100px;
     right: 0;
   }
 
@@ -309,31 +325,9 @@ code,
     width: calc(80% - 350px);
     margin-left: 350px;
   }
-
-
-  h1 {
-    font-size: 4.236em;
-    line-height: 1.33;
-    margin: 1em 0;
+  
+  #internal-nav {
+    display: block;
   }
-
-  h2 {
-    font-size: 2.618em;
-    line-height: 1.22;
-    margin: 0.67em 0;
-  }
-
-  h3,
-  h4 {
-
-    font-size: 1.618em;
-    line-height: 1.111;
-    margin: 0.67em 0;
-  }
-
-  h4 {
-    font-size: 1.314em;
-  }
-
 
 }
