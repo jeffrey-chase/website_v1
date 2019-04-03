@@ -116,9 +116,13 @@ a[href^='#']:hover {
 /* Header and Navigation Bar Styling */
 
 header {
-  text-align: center;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   width: 100%;
+
+}
+
+header * {
+  text-align: center;
 
 }
 
@@ -325,7 +329,7 @@ code,
     width: calc(80% - 350px);
     margin-left: 350px;
   }
-  
+
   #internal-nav {
     display: block;
   }
