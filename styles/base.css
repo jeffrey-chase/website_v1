@@ -110,6 +110,12 @@ a[href^='#']:hover {
   color: #9AEF99;
 }
 
+img.preview {
+  border: 0.2em solid #333344;
+  margin: 2em 0;
+  width: 100%;
+}
+
 
 
 
