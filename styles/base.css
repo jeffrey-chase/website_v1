@@ -14,7 +14,9 @@ body {
   color: #4D4D5B;
   font-family: "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
   font-size: 1em;
+  height: 100%;
   line-height: 1.33;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -43,7 +45,8 @@ h4 {
 h1 {
   font-size: 4.236em;
   line-height: 1.33;
-  margin: 0.5em 0;
+  margin: 0.5em 1em;
+  
 }
 
 h2 {
@@ -196,10 +199,36 @@ nav a:active,
 
 .current {
   border-bottom: 0.215em solid white;
+  color: black !important;
 }
 
 #internal-nav {
   display: none;
+  font-size: 1.3em;
+}
+
+
+/* Footer */
+footer {
+  background: #333344;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+footer h3 {
+  color: white !important;
+}
+
+footer a {
+  background: none;
+  color: #9AEF99 !important;
+}
+
+footer a:hover {
+  color: #D9F9D9 !important;
 }
 
 /* Body Copy Layout */
@@ -209,7 +238,6 @@ article {
   width: 80%;
   margin-left: 10%;
 }
-
 
 .columns {
   align-content: center;
@@ -223,9 +251,10 @@ article {
   margin-top: 3em;
 }
 
+
 .left {
   flex: 1 1 175px;
-  padding-right: 2em;
+  padding: 0 2em 0 0;
 }
 
 .left h3 {
@@ -278,6 +307,10 @@ body {
   margin-top: 50px;
 }
 
+article:last-of-type {
+  margin-bottom: 200px;
+}
+
 li {
   margin: 0.66em 0 1em 0;
 }
@@ -315,6 +348,10 @@ code,
     left: 25px;
     top: 25px;
     width: 300px;
+  }
+  
+  h1 {
+    margin: 0.5em 0;
   }
 
   header::after {
