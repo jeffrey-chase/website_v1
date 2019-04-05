@@ -159,9 +159,11 @@ header li {
 
 nav {
   background: #333344;
+  border-bottom: 0.25em solid #333344;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  padding: 15px;
+  /*  padding: 15px;*/
   position: fixed;
+  text-align: right;
   top: 0px;
   right: 0;
   left: 0;
@@ -169,27 +171,42 @@ nav {
 }
 
 nav ul {
-  float: right;
-  position: relative;
-  /*
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-*/
+  display: none;
+  width: 100vw;
 
 }
 
-nav ul li {
-  display: inline-block;
+nav li {
+  text-align: center;
   margin: 0;
-  list-style: none;
+  width: 100%;
 }
 
+nav ul.show {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.navbutton {
+  border: none;
+  background: #333344;
+  color: white;
+  display: inline-block;
+  font-size: 1.5em;
+  padding: 10px;
+}
+
+.navbutton:active {
+  color: #9AEF99;
+}
 
 nav a {
   background: none;
   color: white;
+  display: inline-block;
   padding: 15px 15px 10px 15px;
+  width: 100%;
 }
 
 nav a:hover,
@@ -255,7 +272,7 @@ article {
 
 
 .left {
-  flex: 1 1 150px;
+  flex: 1 1 100px;
   padding: 0 2em 0 0;
 }
 
@@ -264,7 +281,7 @@ article {
 }
 
 .right {
-  flex: 1 3 450px;
+  flex: 1 3 300px;
 }
 
 .links {
@@ -361,8 +378,31 @@ code,
     right: 0;
   }
 
+  nav {
+    border: none;
+    padding: 2px 10px;
+  }
+
+  nav ul {
+    display: inline-block;
+    float: right;
+    position: relative;
+    width: auto;
+  }
+
+  nav ul li {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+    width: auto;
+  }
+
+  .navbutton {
+    display: none;
+  }
+
   article {
-    width: calc(80% - 350px);
+    width: calc(85% - 350px);
     margin-left: 350px;
   }
 

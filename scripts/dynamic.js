@@ -6,9 +6,16 @@
     window.addEventListener('scroll', function () {
       parallax(header, start);
     });
+    
+    document.querySelector('.navbutton').addEventListener('click', ()=>{
+      document.querySelector('nav ul').classList.toggle('show');
+    });
   });
 
   let parallax = (el, start) => {
+    if (window.innerWidth < 810){
+      return false;
+    }
     let max = parseFloat(window.innerHeight) - start  - 
         document.querySelector('footer').getBoundingClientRect().height;
     let bottom = document.body.getBoundingClientRect().height;
