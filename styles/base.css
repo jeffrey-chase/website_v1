@@ -11,6 +11,7 @@ html {
 }
 
 body {
+/*  background-image: url(../content/img/backgrounds/diagonal-lines.svg);*/
   color: #4D4D5B;
   font-family: "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
   font-size: 1em;
@@ -127,8 +128,8 @@ img.preview {
 /* Header and Navigation Bar Styling */
 
 header {
+  background: white;
   text-align: center;
-
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   width: 100%;
 }
@@ -149,12 +150,16 @@ header ul {
 
 
 header li {
-  font-size: 0.8em;
+  font-size: 0.9em;
   padding: 0.33em 0 0.33em 0.33em;
   margin: 0.22em 0 0.22em 0.33em;
   list-style: none;
 }
 
+
+header [class^='fa']::before {
+  font-size: 1.5em;
+}
 
 
 nav {
@@ -229,13 +234,18 @@ nav a:active,
 
 /* Footer */
 footer {
-  background: #333344;
+  /*  background: #333344;*/
+  background-color: #333344;
+  background-image: url(../content/img/backgrounds/topography.svg);
+  /*  filter: opacity(50%);*/
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   bottom: 0;
   position: absolute;
   text-align: center;
   width: 100%;
 }
+
+
 
 footer h3 {
   color: white !important;
@@ -358,6 +368,7 @@ code,
 @media only screen and (min-width: 800px) {
 
   header {
+    min-height: 500px;
     text-align: left;
     position: fixed;
     left: 25px;

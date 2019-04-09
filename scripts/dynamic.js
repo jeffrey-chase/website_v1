@@ -13,7 +13,7 @@
   });
 
   let parallax = (el, start) => {
-    if (window.innerWidth < 810){
+    if (window.innerWidth < 801){
       return false;
     }
     let max = parseFloat(window.innerHeight) - start  - 
