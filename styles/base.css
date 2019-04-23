@@ -284,6 +284,7 @@ article {
 .left {
   flex: 1 1 100px;
   padding: 0 2em 0 0;
+  text-align: right;
 }
 
 .left h3 {
