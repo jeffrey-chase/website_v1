@@ -19,7 +19,6 @@ body {
   height: 100%;
   line-height: 1.33;
   margin-top: 50px;
-  min-height: 100vh;
   position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
