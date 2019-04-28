@@ -13,7 +13,8 @@ html {
 body {
   /*  background-image: url(../content/img/backgrounds/diagonal-lines.svg);*/
   color: #4D4D5B;
-  font-family: "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
+    font-family: 'Cardo', "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
+/*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
   font-size: 1em;
   height: 100%;
   line-height: 1.33;
@@ -29,6 +30,7 @@ em {
 }
 
 p {
+  text-align: justify;
   margin: 1.33em 0;
 }
 
@@ -40,9 +42,11 @@ h1,
 h2,
 h3,
 h4 {
-  color: #333344;
+  color: #334;
   font-weight: 300;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  /*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -128,14 +132,13 @@ img.preview {
 /* Header and Navigation Bar Styling */
 
 header {
-  background: white;
   text-align: center;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   width: 100%;
 }
 
 header::after {
-  border-top: 0.22em solid #333344;
+  border-top: 0.22em solid #334;
   /*  float: right;*/
   display: block;
   margin: 0 auto;
@@ -163,8 +166,8 @@ header [class^='fa']::before {
 
 
 nav {
-  background: #333344;
-  border-bottom: 0.25em solid #333344;
+  background: #334;
+  border-bottom: 0.25em solid #334;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   /*  padding: 15px;*/
   position: fixed;
@@ -239,13 +242,13 @@ footer {
   /*  background-image: url(../content/img/backgrounds/diagonal-lines.svg);*/
   /*  filter: opacity(50%);*/
   font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  bottom: 0;
-  position: absolute;
   text-align: center;
   width: 100%;
 }
-
-
+footer *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 5px;
+}
 
 footer h3 {
   color: white !important;
@@ -296,8 +299,8 @@ article {
 
 .links {
   background: #f9f9f9;
-  border-left: 0.11em solid #333344;
-  border-right: 0.11em solid #333344;
+  border-left: 0.11em solid #334;
+  border-right: 0.11em solid #334;
   padding: 0.5em;
   text-align: center;
 }
@@ -313,8 +316,8 @@ article {
 }
 
 .tags div {
-  background: #333344;
-  border: 0.33em solid #333344;
+  background: #334;
+  border: 0.33em solid #334;
   border-radius: 0.5em;
   color: white;
   height: 2.47em;
@@ -382,7 +385,7 @@ code,
 
   header::after {
     border: none;
-    border-right: 0.1em solid #333344;
+    border-right: 0.1em solid #334;
     height: 400px;
     position: absolute;
     top: 100px;
@@ -409,9 +412,12 @@ code,
     width: auto;
   }
 
-  .left {
-/*    text-align: right;*/
-
+  .left * {
+    text-align: right;
+  }
+  
+  .left progress {
+    float: right;
   }
 
   .navbutton {
