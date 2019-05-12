@@ -9,6 +9,9 @@
     
     document.querySelector('.navbutton').addEventListener('click', ()=>{
       document.querySelector('nav ul').classList.toggle('show');
+      document.querySelector('.navbutton').classList.toggle('show');
+//      document.querySelector('.navbutton').classList.toggle('fa-bars');
+//      document.querySelector('.navbutton').classList.toggle('fa-angle-up')
     });
   });
 

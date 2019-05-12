@@ -13,8 +13,8 @@ html {
 body {
   /*  background-image: url(../content/img/backgrounds/diagonal-lines.svg);*/
   color: #4D4D5B;
-    font-family: 'Cardo', "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
-/*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+  font-family: 'Cardo', "EB Garamond", "Garamond", "Times New Roman", "Times", serif;
+  /*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
   font-size: 1em;
   height: 100%;
   line-height: 1.33;
@@ -169,6 +169,7 @@ nav {
   border-bottom: 0.25em solid #334;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   /*  padding: 15px;*/
+  padding: 10px;
   position: fixed;
   text-align: right;
   top: 0px;
@@ -177,10 +178,69 @@ nav {
   width: 100%;
 }
 
-nav ul {
-  display: none;
-  width: 100vw;
+.navbutton {
+  background: #334;
+  border: none;
+  height: 16px;
+  margin: 5px;
+  width: 20px;
+  position: relative;
+  right: 40px;
+}
 
+.navbutton * {
+  transition-duration: 500ms;
+}
+
+.navbutton:active .bar,
+.navbutton:hover .bar {
+  background: #9AEF99 !important;
+}
+
+.navbutton .bar {
+  background: white;
+  content: "";
+  height: 3px;
+  width: 20px;
+  position: absolute;
+}
+
+
+#top-bar {
+  top: 0;
+}
+
+#bottom-bar {
+  top: 16px;
+}
+
+#mid-bar {
+  top: 8px;
+}
+
+.navbutton.show .bar {
+  top: 7.5px !important;
+  width: 25px;
+}
+
+.navbutton.show #top-bar {
+  transform: rotate(40deg);
+}
+
+.navbutton.show #bottom-bar {
+  transform: rotate(320deg);
+}
+
+.navbutton.show #mid-bar {
+  display: none;
+}
+
+nav ul {
+  height: 0;
+  overflow: hidden;
+  transition-duration: 1s;
+  transition-delay: 200ms;
+  width: 100vw;
 }
 
 nav li {
@@ -191,22 +251,12 @@ nav li {
 
 nav ul.show {
   display: block;
-  margin: 0;
+  height: 160px;
+  margin: 10px;
   padding: 0;
 }
 
-.navbutton {
-  border: none;
-  background: #333344;
-  color: white;
-  display: inline-block;
-  font-size: 1.5em;
-  padding: 10px;
-}
 
-.navbutton:active {
-  color: #9AEF99;
-}
 
 nav a {
   background: none;
@@ -244,6 +294,7 @@ footer {
   text-align: center;
   width: 100%;
 }
+
 footer *:last-child {
   margin-bottom: 0;
   padding-bottom: 5px;
@@ -321,8 +372,6 @@ article {
   color: white;
   height: 2.47em;
   width: 4em;
-
-
 }
 
 .tags div span:nth-child(1) {
@@ -400,6 +449,8 @@ code,
   nav ul {
     display: inline-block;
     float: right;
+    height: auto;
+    overflow: auto;
     position: relative;
     width: auto;
   }
@@ -414,7 +465,7 @@ code,
   .left * {
     text-align: right;
   }
-  
+
   .left progress {
     float: right;
   }
