@@ -168,8 +168,6 @@ nav {
   background: #334;
   border-bottom: 0.25em solid #334;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  /*  padding: 15px;*/
-  padding: 10px;
   position: fixed;
   text-align: right;
   top: 0px;
@@ -182,7 +180,7 @@ nav {
   background: #334;
   border: none;
   height: 16px;
-  margin: 5px;
+  margin: 10px;
   width: 20px;
   position: relative;
   right: 5%;
@@ -252,7 +250,7 @@ nav li {
 nav ul.show {
   display: block;
   height: 160px;
-  margin: 10px;
+/*  margin: 10px;*/
   padding: 0;
 }
 
@@ -446,7 +444,7 @@ code,
     padding: 2px 10px;
   }
 
-  nav ul {
+  nav ul, nav ul.show {
     display: inline-block;
     float: right;
     height: auto;
