@@ -1,30 +1,23 @@
-(function () {
-  window.addEventListener('load', function () {
-    let header = document.querySelector('header');
-    let start = parseFloat(header.getBoundingClientRect().bottom);
+$(() => {
+  let header = $('header')
+  let start = header[0].getBoundingClientRect().bottom;
 
-    window.addEventListener('scroll', function () {
-      parallax(header, start);
-    });
-    
-    document.querySelector('.navbutton').addEventListener('click', ()=>{
-      document.querySelector('nav ul').classList.toggle('show');
-      document.querySelector('.navbutton').classList.toggle('show');
-//      document.querySelector('.navbutton').classList.toggle('fa-bars');
-//      document.querySelector('.navbutton').classList.toggle('fa-angle-up')
-    });
+  $(window).scroll(() => {
+    parallax(header, start);
+  })
+
+  $('.navbutton').click(() => {
+    $('nav ul, .navbutton').toggleClass('show');
   });
 
-  let parallax = (el, start) => {
-    if (window.innerWidth < 801){
+  function parallax(el, start) {
+    if ($(window).width() < 801) {
       return false;
     }
-    let max = parseFloat(window.innerHeight) - start  - 
-        document.querySelector('footer').getBoundingClientRect().height;
-    let bottom = document.body.getBoundingClientRect().height;
-    let maxScroll = bottom - window.innerHeight;
-    let scrollLeft = parseFloat(window.scrollY) + window.innerHeight - bottom;
-
-    el.style.transform = "translateY(" + ((scrollY / maxScroll) * max * 0.2) + "px)";
+    let max = $(window).height() - start - $('footer').height();
+    let bottom = $(document.body).height();
+    let maxScroll = bottom - $(window).height();
+    console.log('maxscroll: ' + max)
+    $(el).css('transform', 'translateY(' + ((window.scrollY / maxScroll) * max * 0.4) + 'px)');
   }
-})();
+})

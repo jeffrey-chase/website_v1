@@ -44,7 +44,7 @@ h4 {
   color: #334;
   font-weight: 300;
   /*  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', "Helvetica Neue", Helvetica, sans-serif;
   text-transform: uppercase;
 }
 
@@ -77,6 +77,7 @@ a {
   background: #DDEEDD;
   color: #334444;
   padding: 0.25em;
+  transition: 500ms ease;
 }
 
 a:visited {
@@ -89,6 +90,12 @@ a:hover {
   text-decoration: none;
 }
 
+a:hover span,
+a:hover i {
+  transform: translateY(-5px);
+  transition-duration: 500ms;
+}
+
 a[href^='http'] {
   background: none;
   border-bottom: none;
@@ -99,7 +106,7 @@ a[href^='http']:hover {
   color: #9AEF99;
 }
 
-a[class^='fa'] {
+a span[class^='fa'] {
   color: inherit;
   font-size: 1.25em;
 }
@@ -125,7 +132,10 @@ img.preview {
   width: 100%;
 }
 
-
+img.preview:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 5px black;
+}
 
 
 /* Header and Navigation Bar Styling */
@@ -141,6 +151,7 @@ header::after {
   /*  float: right;*/
   display: block;
   margin: 0 auto;
+  min-width: 250px;
   width: 66%;
   content: "";
 
@@ -160,6 +171,7 @@ header li {
 
 
 header [class^='fa']::before {
+  color: #334;
   font-size: 1.5em;
 }
 
@@ -203,6 +215,9 @@ nav {
   position: absolute;
 }
 
+nav *:hover {
+  border: none;
+}
 
 #top-bar {
   top: 0;
@@ -250,11 +265,9 @@ nav li {
 nav ul.show {
   display: block;
   height: 160px;
-/*  margin: 10px;*/
+  /*  margin: 10px;*/
   padding: 0;
 }
-
-
 
 nav a {
   background: none;
@@ -262,6 +275,11 @@ nav a {
   display: inline-block;
   padding: 15px 15px 10px 15px;
   width: 100%;
+}
+
+nav a:hover {
+  border: none;
+  transform: none;
 }
 
 nav a:hover,
@@ -300,6 +318,7 @@ footer *:last-child {
 
 footer h3 {
   color: white !important;
+  padding: 10px;
 }
 
 footer a {
@@ -372,6 +391,11 @@ article {
   width: 4em;
 }
 
+.tags div:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 5px 5px 10px black;
+}
+
 .tags div span:nth-child(1) {
   font-size: 1.33em;
 }
@@ -382,7 +406,7 @@ article {
 }
 
 article:last-of-type {
-  margin-bottom: 200px;
+  margin-bottom: 100px;
 }
 
 li {
@@ -444,7 +468,9 @@ code,
     padding: 2px 10px;
   }
 
-  nav ul, nav ul.show {
+
+  nav ul,
+  nav ul.show {
     display: inline-block;
     float: right;
     height: auto;
@@ -458,6 +484,10 @@ code,
     margin: 0;
     list-style: none;
     width: auto;
+  }
+
+  nav a:hover {
+    border-bottom: 0.215em solid #9AEF99;
   }
 
   .left * {
