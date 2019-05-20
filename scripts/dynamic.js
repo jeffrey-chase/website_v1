@@ -1,5 +1,5 @@
 $(() => {
-  let header = $('header')
+  let header = $('header');
   let start = header[0].getBoundingClientRect().bottom;
 
   $(window).scroll(() => {
@@ -14,10 +14,9 @@ $(() => {
     if ($(window).width() < 801) {
       return false;
     }
-    let max = $(window).height() - start - $('footer').height();
+    let max = $(window).height() - start - $('footer').outerHeight();
     let bottom = $(document.body).height();
     let maxScroll = bottom - $(window).height();
-    console.log('maxscroll: ' + max)
     $(el).css('transform', 'translateY(' + ((window.scrollY / maxScroll) * max * 0.4) + 'px)');
   }
 })
