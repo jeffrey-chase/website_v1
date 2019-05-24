@@ -17,6 +17,6 @@ $(() => {
     let max = $(window).height() - start - $('footer').outerHeight();
     let bottom = $(document.body).height();
     let maxScroll = bottom - $(window).height();
-    $(el).css('transform', 'translateY(' + ((window.scrollY / maxScroll) * max * 0.4) + 'px)');
+    $(el).css('transform', 'translateY(' + ((window.scrollY / maxScroll) * max) + 'px)');
   }
 })
